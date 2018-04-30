@@ -21,8 +21,12 @@ export class ProductosService {
       this.http.get('https://mapas-1495405752278.firebaseio.com/productos_idx.json')
         .subscribe( res => {
           console.log(res.json());
-          this.cargando = true;
-          this.productos = res.json();
+
+          // setTimeout(() => {
+            this.cargando = true;
+            this.productos = res.json();
+          // }, 3000);
+
         });
 
   }
