@@ -20,7 +20,7 @@ export class ProductosService {
 
       this.http.get('https://mapas-1495405752278.firebaseio.com/productos_idx.json')
         .subscribe( res => {
-          console.log(res.json());
+          // console.log(res.json());
 
           // setTimeout(() => {
             this.cargando = true;
