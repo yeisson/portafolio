@@ -12,7 +12,7 @@ export class ProductosService {
   }
 
   /**
-   * cargar_prodcutos
+   * cargar_productos
    */
   public cargar_productos() {
 
@@ -29,6 +29,13 @@ export class ProductosService {
 
         });
 
+  }
+
+  /**
+   * cargar producto
+   */
+  public cargar_producto( cod: string) {
+    return this.http.get(`https://mapas-1495405752278.firebaseio.com/productos/${ cod }.json`);
   }
 
 }
