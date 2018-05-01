@@ -21,7 +21,7 @@ export class ProductoComponent {
 
       _ps.cargar_producto(parametros['id']).subscribe(
         res => {
-          console.log(res.json());
+          // console.log(res.json());
           this.cod = parametros['id'];
           this.producto = res.json();
         }

@@ -7,7 +7,7 @@ export class ProductosService {
 
   productos: any[] = [];
   productos_filtrado: any[] = [];
-  cargando = true;
+  cargando = false;
 
   constructor( private http: Http ) {
     this.cargar_productos();
@@ -18,7 +18,7 @@ export class ProductosService {
    */
   public cargar_productos() {
 
-      this.cargando = false;
+      this.cargando = true;
 
       let promesa = new Promise ( ( resolve, reject) => {
 
@@ -27,7 +27,7 @@ export class ProductosService {
               // console.log(res.json());
 
               // setTimeout(() => {
-                this.cargando = true;
+                this.cargando = false;
                 this.productos = res.json();
                 resolve();
               // }, 3000);
